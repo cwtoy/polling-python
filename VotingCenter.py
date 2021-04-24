@@ -13,3 +13,8 @@ class VotingCenter:
 
     def getCenterID(self):
         return self.centerID
+
+    def sendOutBallots(self):
+        #All registered voters get the ballot from the ballot counter
+        for voter in self.registeredVoters:
+            voter.ballot = self.ballotCounter.getBallot()

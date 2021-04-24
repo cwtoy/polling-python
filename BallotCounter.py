@@ -15,6 +15,3 @@ class BallotCounter:
             return self.ballot
         else:
             return None
-
-    def countBallots(self):
-
