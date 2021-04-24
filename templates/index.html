@@ -3,59 +3,91 @@
 <head>
 <title>Polling</title>
 </head>
-<body>
-<h1></h1>
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+#t01 th {
+  background-color: black;
+  color: white;
+}
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+.center {
+  margin: auto;
+  width: 50%;
+
+  padding: 10px;
+}
+.button {
+  background-color: #45b6fe; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+</style>
+<body class="content">
+<div>
+    <h1 class="center">President</h1>
+</div>
 <form action="/poll" method="POST">
-    <label > Official Ballot </label>
     <div >
-        <table cellpadding="4" cellspacing="0" >
-            <tbody>
-            <tr >
-                <th >
-                    <label > Candidates </label>
-                </th>
+        <table id="t01">
+            <tr>
+                <th>Candidates</th>
             </tr>
-            <tr >
-                <td >
-                    <input type="radio" id="candidate1" name="candidates"  value="1">
-                    <label for="candidate1"> candidate 1 </label>
-                </td>
+            <tr>
+                <td>Candidate 1</td>
+                <td><input type="radio" id="candidate1" name="candidates"  value="1"></td>
             </tr>
-            <tr >
-                <td >
-                   <input type="radio" id="candidate2" name="candidates" value="2">
-                    <label for="candidate2"> candidate 2 </label>
-                </td>
+            <tr>
+                <td>Candidate 2</td>
+                <td><input type="radio" id="candidate2" name="candidates" value="2"></td>
             </tr>
-            <tr >
-                <td >
-                    <input type="radio" id="candidate3" name="candidates" value="3">
-                    <label for="candidate3"> candidate 3 </label>
-                </td>
+            <tr>
+                <td>Candidate 3</td>
+                <td><input type="radio" id="candidate3" name="candidates" value="3"></td>
             </tr>
-            <tr >
-                <td >
-                    <input type="radio" id="candidate4" name="candidates" value="4">
-                    <label for="candidate4"> candidate 4 </label>
-                </td>
+            <tr>
+                <td>Candidate 4</td>
+                <td><input type="radio" id="candidate4" name="candidates"  value="4"></td>
             </tr>
-            <tr >
-                <td >
-                    <input type="radio" id="candidate5" name="candidates" value="5">
-                    <label for="candidate5"> candidate 5 </label>
-                </td>
+            <tr>
+                <td>Candidate 5</td>
+                <td><input type="radio" id="candidate5" name="candidates" value="5"></td>
             </tr>
-            <tr >
-                <td >
-                    <input type="radio" id="candidate6" name="candidates" value="6">
-                    <label for="candidate6"> candidate 6 </label>
-                </td>
+            <tr>
+                <td>Candidate 6</td>
+                <td><input type="radio" id="candidate6" name="candidates" value="6"></td>
             </tr>
-            </tbody>
         </table>
     </div>
-
-    <input type="submit" value="Submit!" >
+<div class="center">
+   <input class="button button4" type="submit" value="Submit!" >
+</div>
 </form>
 </body>
 </html>
