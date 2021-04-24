@@ -18,6 +18,9 @@ class Voter:
     def setBallot(self, ballot):
         self.ballot = ballot
 
+    def getSSN(self):
+        return self.SSN
+
     def hasRegistered(self):
         return self.registered
 

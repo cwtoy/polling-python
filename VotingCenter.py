@@ -1,4 +1,5 @@
 from BallotCounter import BallotCounter
+from VoterBallot import VoterBallot
 
 
 class VotingCenter:
@@ -16,5 +17,6 @@ class VotingCenter:
 
     def sendOutBallots(self):
         #All registered voters get the ballot from the ballot counter
+        ballot = self.ballotCounter.getBallot()
         for voter in self.registeredVoters:
-            voter.ballot = self.ballotCounter.getBallot()
+            voter.ballot = VoterBallot(ballot, voter.getSSN())
