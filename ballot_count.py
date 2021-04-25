@@ -57,18 +57,6 @@ def results():
     allCandidates[4] = candidate5
     allCandidates[5] = candidate6
 
-    winner = None
-    idx = 0
-    #loop ends at idx 2nd to last compared to idx last
-    while idx < len(allCandidates) - 1:
-        if winner:
-            if winner < allCandidates[idx]:
-                winner = allCandidates[idx]
-        else:
-            winner = allCandidates[idx]
-        idx += 1
-
-    return str(winner)
 
 
 
