@@ -1,6 +1,7 @@
 import webbrowser
+import ballot_count
 from threading import Timer
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,jsonify
 import os
 
 
@@ -14,10 +15,15 @@ def open_browser():
 
 @app.route("/poll", methods = ["POST"] )
 def poll():
-    checked = request.form["candidates"] #after the button is pressed, this will pull up that candiate and save the value
-                                         #that is a number assigned to each one and save it to checked.
 
-    return render_template('thankyou.html')
+
+    checked = request.form["candidates"]
+    votes = ballot_count.countVote(checked)
+    ballot_count.storage(votes)
+
+
+    return ballot_count.results()
+
 
 if __name__ == '__main__':
 
